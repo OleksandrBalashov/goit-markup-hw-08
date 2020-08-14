@@ -1,16 +1,26 @@
-.join-container > .join {
-  display: block;
-  margin-bottom: 20px;
+.join-container {
+  @media screen and (max-width: 767px) {
+    padding-bottom: 60px;
+    text-align: center;
+  }
 
-  color: $primary-white-color;
+  .join {
+    display: block;
+    margin-bottom: 20px;
 
-  font-weight: 700;
-  text-transform: uppercase;
+    color: $primary-white-color;
+
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 }
 
 .socials-list {
   @extend %list;
   display: flex;
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
 
   .social-icon:hover,
   .social-icon:focus {

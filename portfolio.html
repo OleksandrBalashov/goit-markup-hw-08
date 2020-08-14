@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework/07</title>
+    <title>Homework/08</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -24,38 +24,52 @@
           <a href="./index.html" class="logo">
             <span class="logo-primary">Web</span>Studio
           </a>
+          <button class="main-button" data-menu-button>
+            <svg width="40" height="40">
+              <use
+                href="./images/svg/sprite.svg#icon-menu-open"
+                class="icon-menu-open"
+              ></use>
+              <use
+                href="./images/svg/sprite.svg#icon-menu-close"
+                class="icon-menu-close"
+              ></use>
+            </svg>
+          </button>
 
-          <ul class="site-nav">
-            <li class="item"><a href="./index.html">Студия</a></li>
-            <li class="item">
-              <a href="./portfolio.html" class="current">Портфолио</a>
-            </li>
-            <li class="item"><a href="">Контакты</a></li>
-          </ul>
+          <div class="menu-container" data-menu>
+            <ul class="site-nav">
+              <li class="item"><a href="./index.html">Студия</a></li>
+              <li class="item">
+                <a href="./portfolio.html" class="current">Портфолио</a>
+              </li>
+              <li class="item"><a href="">Контакты</a></li>
+            </ul>
+
+            <ul class="site-address">
+              <li class="address-item">
+                <a href="mailto:info@devstudio.com" class="icon-letter"
+                  ><svg class="icon-address" width="16" height="11">
+                    <use href="./images/svg/sprite.svg#icon-letter"></use>
+                  </svg>
+                  <span class="address-text">
+                    info@devstudio.com
+                  </span>
+                </a>
+              </li>
+              <li class="address-item">
+                <a href="tel:+380961111111" class="icon-tel"
+                  ><svg class="icon-address" width="10" height="15">
+                    <use href="./images/svg/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <span class="address-text">
+                    +38 096 111 11 11
+                  </span></a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
-
-        <ul class="site-address">
-          <li class="address-item">
-            <a href="mailto:info@devstudio.com" class="icon-letter"
-              ><svg class="icon-address" width="16" height="11">
-                <use href="./images/svg/sprite.svg#icon-letter"></use>
-              </svg>
-              <span class="address-text">
-                info@devstudio.com
-              </span>
-            </a>
-          </li>
-          <li class="address-item">
-            <a href="tel:+380961111111" class="icon-tel"
-              ><svg class="icon-address" width="10" height="15">
-                <use href="./images/svg/sprite.svg#icon-phone"></use>
-              </svg>
-              <span class="address-text">
-                +38 096 111 11 11
-              </span></a
-            >
-          </li>
-        </ul>
       </div>
     </header>
 
@@ -299,28 +313,28 @@
           <ul class="socials-list">
             <li class="social-item">
               <a href="" aria-label="instagram" class="social-icon">
-                <svg class="icon-join">
+                <svg width="44" heith="44" class="icon-join">
                   <use href="./images/svg/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item">
               <a href="" aria-label="twitter" class="social-icon">
-                <svg class="icon-join">
+                <svg width="44" heith="44" class="icon-join">
                   <use href="./images/svg/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item">
               <a href="" aria-label="facebook" class="social-icon">
-                <svg class="icon-join">
+                <svg width="44" heith="44" class="icon-join">
                   <use href="./images/svg/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item">
               <a href="" aria-label="linkedin" class="social-icon">
-                <svg class="icon-join">
+                <svg width="44" heith="44" class="icon-join">
                   <use href="./images/svg/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -340,7 +354,7 @@
               />
               <button type="submit" class="button">
                 Подписаться
-                <svg class="icon-send">
+                <svg width="24" height="24" class="icon-send">
                   <use href="./images/svg/sprite.svg#icon-telegram"></use>
                 </svg>
               </button>
@@ -349,5 +363,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

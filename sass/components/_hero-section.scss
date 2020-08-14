@@ -2,8 +2,8 @@
   @extend %centered-flex;
   flex-direction: column;
 
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
 
@@ -14,24 +14,39 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../images/overlay/overlay.jpg');
+    url('../../images/overlay/overlay-mobile.jpg');
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+}
 
-  .hero-title {
-    width: 696px;
-    margin-top: 0;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    text-transform: uppercase;
-
-    color: $primary-white-color;
-
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../images/overlay/overlay-mobile-2x.jpg');
   }
+}
+
+.hero-title {
+  max-width: 360px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+
+  color: $primary-white-color;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
 }
 
 .hero-button {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework/07</title>
+    <title>Homework/08</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -24,34 +24,48 @@
           <a href="./index.html" class="logo">
             <span class="logo-primary">Web</span>Studio
           </a>
+          <button class="main-button" data-menu-button>
+            <svg width="40" height="40">
+              <use
+                href="./images/svg/sprite.svg#icon-menu-open"
+                class="icon-menu-open"
+              ></use>
+              <use
+                href="./images/svg/sprite.svg#icon-menu-close"
+                class="icon-menu-close"
+              ></use>
+            </svg>
+          </button>
 
-          <ul class="site-nav">
-            <li class="item"><a href="" class="current">Студия</a></li>
-            <li class="item">
-              <a href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="item"><a href="">Контакты</a></li>
-          </ul>
+          <div class="menu-container" data-menu>
+            <ul class="site-nav">
+              <li class="item"><a href="" class="current">Студия</a></li>
+              <li class="item">
+                <a href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="item"><a href="">Контакты</a></li>
+            </ul>
+
+            <ul class="site-address">
+              <li class="address-item">
+                <a href="mailto:info@devstudio.com" class="link">
+                  <svg class="icon-address" width="16" height="11">
+                    <use href="./images/svg/sprite.svg#icon-letter"></use>
+                  </svg>
+                  <span class="address-text">info@devstudio.com</span>
+                </a>
+              </li>
+              <li class="address-item">
+                <a href="tel:+380961111111"
+                  ><svg class="icon-address" width="10" height="15">
+                    <use href="./images/svg/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <span class="address-text">+38 096 111 11 11</span></a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
-
-        <ul class="site-address list">
-          <li class="address-item">
-            <a href="mailto:info@devstudio.com" class="link">
-              <svg class="icon-address" width="16" height="11">
-                <use href="./images/svg/sprite.svg#icon-letter"></use>
-              </svg>
-              <span class="address-text">info@devstudio.com</span>
-            </a>
-          </li>
-          <li class="address-item">
-            <a href="tel:+380961111111" class="link"
-              ><svg class="icon-address" width="10" height="15">
-                <use href="./images/svg/sprite.svg#icon-phone"></use>
-              </svg>
-              <span class="address-text">+38 096 111 11 11</span></a
-            >
-          </li>
-        </ul>
       </div>
     </header>
 
@@ -66,7 +80,7 @@
         </div>
 
         <!-- Модальное окно -->
-        <div class="backdrop is-hidden" data-modal>
+        <!-- <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <form action="" class="flex-form">
               <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
@@ -141,7 +155,7 @@
               </svg>
             </button>
           </div>
-        </div>
+        </div> -->
       </section>
 
       <!-- Наши преимущества -->
@@ -205,7 +219,7 @@
       </section>
 
       <!-- Чем мы занимаемся -->
-      <section class="section">
+      <section class="section features-section">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
 
@@ -252,11 +266,27 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-item">
-              <img
-                src="./images/team/team-1.jpg"
-                alt="первый член команды"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team-1.webp    480w,
+                    ./images/team/team-1-2x.webp 768w
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./image/team/team-1.jpg     480w,
+                    ./images/team/team-1-2x.jpg 768w
+                  "
+                  src="./images/team/team-1.jpg"
+                  alt="первый член команды"
+                  width="460"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                />
+              </picture>
+
               <div class="team-description">
                 <h3 class="team-title">Игорь Демьяненко</h3>
                 <p class="team-ocupation">Product Designer</p>
@@ -264,7 +294,7 @@
                 <ul class="team-socials">
                   <li class="team-icon">
                     <a href="" aria-label="instagram" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use
                           href="./images/svg/sprite.svg#icon-instagram"
                         ></use>
@@ -274,7 +304,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="twitter" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
@@ -282,7 +312,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="facebook" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
@@ -290,7 +320,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="linkedIn" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -300,11 +330,26 @@
             </li>
 
             <li class="team-item">
-              <img
-                src="./images/team/team-2.jpg"
-                alt="второй член команды"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team-2.webp    480w,
+                    ./images/team/team-2-2x.webp 768w
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./image/team/team-2.jpg     480w,
+                    ./images/team/team-2-2x.jpg 768w
+                  "
+                  src="./images/team/team-2.jpg"
+                  alt="первый член команды"
+                  width="460"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                />
+              </picture>
               <div class="team-description">
                 <h3 class="team-title">Ольга Репина</h3>
                 <p class="team-ocupation">Frontend Developer</p>
@@ -312,7 +357,7 @@
                 <ul class="team-socials">
                   <li class="team-icon">
                     <a href="" aria-label="instagram" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use
                           href="./images/svg/sprite.svg#icon-instagram"
                         ></use>
@@ -322,7 +367,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="twitter" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
@@ -330,7 +375,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="facebook" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
@@ -338,7 +383,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="linkedIn" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -348,11 +393,26 @@
             </li>
 
             <li class="team-item">
-              <img
-                src="./images/team/team-3.jpg"
-                alt="третий член команды"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team-3.webp    480w,
+                    ./images/team/team-3-2x.webp 768w
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./image/team/team-3.jpg     480w,
+                    ./images/team/team-3-2x.jpg 768w
+                  "
+                  src="./images/team/team-3.jpg"
+                  alt="первый член команды"
+                  width="460"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                />
+              </picture>
               <div class="team-description">
                 <h3 class="team-title">Николай Тарасов</h3>
                 <p class="team-ocupation">Marketing</p>
@@ -360,7 +420,7 @@
                 <ul class="team-socials">
                   <li class="team-icon">
                     <a href="" aria-label="instagram" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use
                           href="./images/svg/sprite.svg#icon-instagram"
                         ></use>
@@ -370,7 +430,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="twitter" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
@@ -378,7 +438,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="facebook" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
@@ -386,7 +446,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="linkedIn" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -396,11 +456,26 @@
             </li>
 
             <li class="team-item">
-              <img
-                src="./images/team/team-4.jpg"
-                alt="четвертый член команды"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team-4.webp    480w,
+                    ./images/team/team-4-2x.webp 768w
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./image/team/team-4.jpg     480w,
+                    ./images/team/team-4-2x.jpg 768w
+                  "
+                  src="./images/team/team-4.jpg"
+                  alt="первый член команды"
+                  width="460"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                />
+              </picture>
               <div class="team-description">
                 <h3 class="team-title">Николай Тарасов</h3>
                 <p class="team-ocupation">UI Designer</p>
@@ -408,7 +483,7 @@
                 <ul class="team-socials">
                   <li class="team-icon">
                     <a href="" aria-label="instagram" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use
                           href="./images/svg/sprite.svg#icon-instagram"
                         ></use>
@@ -418,7 +493,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="twitter" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
@@ -426,7 +501,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="facebook" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
@@ -434,7 +509,7 @@
 
                   <li class="team-icon">
                     <a href="" aria-label="linkedIn" class="social-icon">
-                      <svg class="icon">
+                      <svg width="20" height="20" class="icon">
                         <use href="./images/svg/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -505,8 +580,8 @@
 
       <!-- Футер -->
       <footer>
-        <div class="container flex-footer">
-          <div>
+        <div class="container">
+          <div class="flex-footer">
             <a href="./index.html" class="logo inverse">
               <span class="logo-primary">Web</span>Studio
             </a>
@@ -526,28 +601,28 @@
             <ul class="socials-list">
               <li class="social-item">
                 <a href="" aria-label="instagram" class="social-icon">
-                  <svg class="icon-join">
+                  <svg width="20" height="20" class="icon-join">
                     <use href="./images/svg/sprite.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-item">
                 <a href="" aria-label="twitter" class="social-icon">
-                  <svg class="icon-join">
+                  <svg width="20" height="20" class="icon-join">
                     <use href="./images/svg/sprite.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-item">
                 <a href="" aria-label="facebook" class="social-icon">
-                  <svg class="icon-join">
+                  <svg width="20" height="20" class="icon-join">
                     <use href="./images/svg/sprite.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-item">
                 <a href="" aria-label="linkedin" class="social-icon">
-                  <svg class="icon-join">
+                  <svg width="20" height="20" class="icon-join">
                     <use href="./images/svg/sprite.svg#icon-linkedin"></use>
                   </svg>
                 </a>
@@ -567,7 +642,7 @@
                 />
                 <button type="submit" class="button">
                   Подписаться
-                  <svg class="icon-send">
+                  <svg width="24" height="24" class="icon-send">
                     <use href="./images/svg/sprite.svg#icon-telegram"></use>
                   </svg>
                 </button>
@@ -577,6 +652,7 @@
         </div>
       </footer>
     </main>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

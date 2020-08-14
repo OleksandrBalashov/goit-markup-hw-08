@@ -1,12 +1,10 @@
-.container.flex-footer {
+.flex-footer {
   padding-top: 60px;
   padding-bottom: 60px;
-}
 
-.flex-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 
   a {
     @extend %link;
@@ -18,6 +16,8 @@
   margin-bottom: 20px;
   margin-right: 0;
 
+  text-align: center;
+
   color: $primary-white-color;
 }
 
@@ -26,11 +26,6 @@
 
   font-style: normal;
   line-height: 1.71;
-
-  .address {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .address.color-white {

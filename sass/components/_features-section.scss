@@ -1,11 +1,6 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
-  &.no-padding {
-    padding-top: 94px;
-    padding-bottom: 0;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &.no-padding h2 {
     @extend %visually-hidden;
@@ -14,14 +9,11 @@
 
 .features-list {
   @extend %list;
-  display: flex;
 
-  .features-item {
-    flex-basis: calc((100% - 3 * 30px) / 4);
-  }
-
-  .features-item:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (max-width: 480px) {
+    .features-item:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 
