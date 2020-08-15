@@ -102,17 +102,22 @@
 
   font-weight: 500;
   letter-spacing: 0.02em;
+
   @media screen and (max-width: 767px) {
     font-size: 18px;
     line-height: 1.16;
+    // a {
+    //   text-align: center;
+    // }
   }
 
   a {
     @extend %centered-flex;
     @extend %link;
 
+    // text-align: center;
+
     color: $primary-text-color;
-    text-align: center;
 
     transition: color $transition-duration $transition-timing-function;
   }

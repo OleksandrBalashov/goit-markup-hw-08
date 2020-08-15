@@ -1,7 +1,4 @@
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
   &.no-padding h2 {
     @extend %visually-hidden;
   }
@@ -10,7 +7,7 @@
 .features-list {
   @extend %list;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     .features-item:not(:last-child) {
       margin-bottom: 30px;
     }

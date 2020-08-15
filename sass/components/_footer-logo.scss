@@ -1,9 +1,12 @@
-.flex-footer {
+.footer-padding {
   padding-top: 60px;
   padding-bottom: 60px;
+}
 
+.flex-footer {
   @media screen and (max-width: 767px) {
     text-align: center;
+    margin-bottom: 60px;
   }
 
   a {
