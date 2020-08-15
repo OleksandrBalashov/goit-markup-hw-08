@@ -4,15 +4,30 @@
 
   color: $title-text-color;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     font-size: 24px;
     line-height: 1.16;
     letter-spacing: $letter-spacing;
   }
 
-  .logo-primary {
-    color: $accent-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
   }
+}
+
+.logo {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.logo .logo-primary {
+  color: $accent-color;
 }
 
 .flex-container .logo {

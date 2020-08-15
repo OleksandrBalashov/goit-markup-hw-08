@@ -1,7 +1,8 @@
 .container {
   .flex-container {
+    display: flex;
+    align-items: center;
     @media screen and (max-width: 767px) {
-      display: flex;
       align-items: center;
       justify-content: space-between;
 
@@ -34,6 +35,11 @@
   &.is-open {
     display: block;
   }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .site-nav {
@@ -49,18 +55,17 @@
     line-height: 1.16;
 
     text-align: center;
+    margin-bottom: 50px;
 
-    .item {
+    .item:not(:last-child) {
       margin-bottom: 30px;
-    }
-
-    .item:last-child {
-      margin-bottom: 50px;
     }
   }
 }
 
 .site-nav {
+  @extend %list;
+
   .item a {
     @extend %link;
     position: relative;
@@ -68,16 +73,43 @@
     color: $title-text-color;
 
     transition: color $transition-duration $transition-timing-function;
+
     @media screen and (max-width: 767px) {
       display: inline-block;
       margin: 0;
       padding-top: 10px;
       padding-bottom: 8px;
     }
+
+    @media screen and (min-width: 768px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
-  & a:hover,
-  & a:focus {
+}
+
+.site-nav {
+  .item a:hover,
+  .item a:focus {
     color: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 305px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -108,32 +140,54 @@
   @media screen and (max-width: 767px) {
     font-size: 18px;
     line-height: 1.16;
-    // a {
-    //   text-align: center;
-    // }
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-address {
+    display: flex;
+
+    .address-item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.site-address {
   a {
     @extend %centered-flex;
+
     @extend %link;
-
-    // text-align: center;
-
     color: $primary-text-color;
 
     transition: color $transition-duration $transition-timing-function;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      justify-content: start;
+    }
   }
 
-  & a:hover,
-  & a:focus {
+  a:hover,
+  a:focus {
     color: $accent-color;
   }
 }
 
 .address-item {
   @media screen and (max-width: 767px) {
-    &:not(:last-child) {
+    &:first-child {
       margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:first-child {
+      margin-bottom: 10px;
     }
   }
 }
@@ -145,4 +199,8 @@
   fill: currentColor;
 
   transition: fill $transition-duration $transition-timing-function;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 8px;
+  }
 }

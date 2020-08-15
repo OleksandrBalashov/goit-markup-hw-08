@@ -230,7 +230,7 @@ footer {
 
 @media screen and (min-width: 320px) and (max-width: 365px) {
   .link-text .portfolio-text {
-    padding: 5px 10px;
+    padding: 5px 8px;
   }
 }
 
