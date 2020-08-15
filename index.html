@@ -24,7 +24,12 @@
           <a href="./index.html" class="logo">
             <span class="logo-primary">Web</span>Studio
           </a>
-          <button class="main-button" data-menu-button>
+          <button
+            class="main-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
             <svg width="40" height="40">
               <use
                 href="./images/svg/sprite.svg#icon-menu-open"
@@ -37,7 +42,7 @@
             </svg>
           </button>
 
-          <div class="menu-container" data-menu>
+          <div class="menu-container" id="menu-container" data-menu>
             <ul class="site-nav">
               <li class="item"><a href="" class="current">Студия</a></li>
               <li class="item">
