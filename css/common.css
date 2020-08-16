@@ -438,14 +438,23 @@ footer {
   }
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .container.footer-padding {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: baseLine;
         -ms-flex-align: baseLine;
             align-items: baseLine;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .flex-footer {
+    margin-right: 70px;
   }
 }
 
@@ -492,6 +501,12 @@ footer {
 
 .address:hover, .address:focus {
   color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .address:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -549,7 +564,8 @@ footer {
 
 @media screen and (max-width: 1199px) {
   .auth-container {
-    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
   }
 }
 
@@ -559,6 +575,20 @@ footer {
   color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1199px) {
+  .auth-container {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .flex-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .email-button {
@@ -574,15 +604,16 @@ footer {
   background-color: transparent;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .email-button {
-    margin-bottom: 20px;
+    width: 358px;
+    margin-right: 12px;
   }
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .email-button {
-    margin-right: 12px;
+    margin-bottom: 20px;
   }
 }
 

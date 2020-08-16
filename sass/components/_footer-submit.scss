@@ -1,7 +1,11 @@
-.auth-container {
-  @media screen and (max-width: 1199px) {
-    text-align: center;
+@media screen and (max-width: 1199px) {
+  .auth-container {
+    max-width: 450px;
+    margin: 0 auto;
   }
+}
+
+.auth-container {
   .auth {
     display: block;
     margin-bottom: 20px;
@@ -12,11 +16,17 @@
 
     text-transform: uppercase;
   }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
-// .flex-wrap {
-//   display: flex;
-// }
+@media screen and (min-width: 1200px) {
+  .flex-wrap {
+    display: flex;
+  }
+}
 
 .email-button {
   width: 100%;
@@ -33,11 +43,13 @@
 
   background-color: transparent;
 
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+  }
+
   @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
-  }
-  @media screen and (min-width: 1199px) {
-    margin-right: 12px;
   }
 }
 
