@@ -49,6 +49,11 @@
     min-height: 581px;
   }
 
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    top: 208px;
+    width: 100%;
+  }
+
   .button {
     display: block;
     padding: 10px 55px;
@@ -130,7 +135,7 @@
 
     font-size: 12px;
     line-height: 1.16;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.01em;
 
     color: $primary-text-color;
   }
@@ -174,11 +179,17 @@
   border: 0;
   margin-bottom: 30px;
 
+  @media screen and (min-width: 1200px) {
+    .checkbox-text {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+
   @media screen and (max-width: 1199px) {
     .checkbox-text {
       font-size: 12px;
       line-height: 1.16;
-      letter-spacing: $letter-spacing;
     }
   }
 }
@@ -198,7 +209,7 @@
     border-color $transition-duration $transition-timing-function,
     outline $transition-duration $transition-timing-function;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     max-width: 16px;
     min-height: 15px;
     width: 100%;
