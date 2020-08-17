@@ -245,15 +245,15 @@ footer {
           transform: translateY(-100%);
 }
 
-@media screen and (min-width: 1200px) {
-  .portfolio-text {
-    padding: 63px 24px;
-  }
-}
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-text {
     padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-text {
+    padding: 63px 24px;
   }
 }
 
@@ -265,7 +265,6 @@ footer {
 .link-text .portfolio-text {
   position: absolute;
   top: 100%;
-  left: 0;
   width: 100%;
   margin: 0;
   font-size: 18px;
