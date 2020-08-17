@@ -23,6 +23,7 @@
 
   .work-item {
     flex-basis: calc((100% - 2 * 30px) / 3);
+    z-index: -1;
   }
 
   .work-item:not(:last-child) {

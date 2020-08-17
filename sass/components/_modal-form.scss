@@ -25,7 +25,6 @@
 .modal {
   position: absolute;
   top: 93px;
-
   left: 50%;
   transform: translateX(-50%);
 
@@ -41,7 +40,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   transform: translateX(-50%) scale(1);
-  transition: transform $transition-duration transition-timing-function;
+  transition: transform $transition-duration $transition-timing-function;
 
   @media screen and (min-width: 1200px) {
     top: 221px;
@@ -49,7 +48,7 @@
     min-height: 581px;
   }
 
-  @media screen and (min-width: 767px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     top: 208px;
     width: 100%;
   }
