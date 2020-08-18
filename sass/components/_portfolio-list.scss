@@ -95,14 +95,18 @@
     transition: transform $transition-duration $transition-timing-function;
 
     @media screen and (min-width: 320px) and (max-width: 365px) {
-      padding: 0px 12px;
+      padding: 30px 20px;
+      font-size: 14px;
     }
     @media screen and (min-width: 366px) and (max-width: 420px) {
-      padding: 24px 24px;
+      padding: 40px 30px;
+      font-size: 15px;
+      letter-spacing: 1.4;
     }
 
     @media screen and (min-width: 421px) and (max-width: 459px) {
-      padding: 60px 24px;
+      padding: 55px 30px;
+      font-size: 17px;
     }
     @media screen and (min-width: 460px) and (max-width: 767px) {
       padding: 77px 24px;
